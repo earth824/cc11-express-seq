@@ -19,13 +19,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       password: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: true,
-          len: [6, 12]
-        }
+        allowNull: false
       },
-      birthDate: DataTypes.DATEONLY
+      birthDate: DataTypes.DATEONLY,
+      lastUpdatePassword: DataTypes.DATE
     },
     {
       underscored: true,
